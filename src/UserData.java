@@ -6,13 +6,9 @@ public abstract class UserData {
     private int cpf;
     private int cod;
     private final Address address = new Address();
-    private final NotebookManager notebookManager = new NotebookManager();
+    private final Notebook notebook= new Notebook();
 
     public UserData() {
-    }
-
-    public NotebookManager getNotebookManager() {
-        return notebookManager;
     }
 
     public String getName() {
@@ -21,6 +17,10 @@ public abstract class UserData {
 
     public Address getAddress() {
         return address;
+    }
+
+    public Notebook getNotebook() {
+        return notebook;
     }
 
     public void setName(String name) {
