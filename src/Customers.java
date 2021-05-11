@@ -18,6 +18,6 @@ public class Customers extends UserData {
     @Override
     public void printClass() {
         super.printClass();
-        System.out.println("Classe mãe: UserData");
+        System.out.println("Classe filha");
     }
 }

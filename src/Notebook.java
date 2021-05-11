@@ -3,11 +3,13 @@
 public class Notebook implements IRegistered{
 
     private int cod;
+    private int initQty = 0;
     private String name;
     private final Specs specs = new Specs();
     private final NoteInfo info = new NoteInfo();
 
     public Notebook() {
+        initQty++;
     }
 
     public Specs getSpecs() {
@@ -22,12 +24,8 @@ public class Notebook implements IRegistered{
         return cod;
     }
 
-    public void setCod(int cod) throws CodNumBelowException {
-        if(cod >=0){
-            this.cod = cod;
-        }else{
-            throw new CodNumBelowException();
-        }
+    public void setCod(int cod) {
+        this.cod = cod;
     }
 
     public String getName() {
@@ -39,9 +37,7 @@ public class Notebook implements IRegistered{
     }
 
     @Override
-    public void printClassData() {
-        System.out.println("\nA classe " + this + " possui os seguintes dados em suas variaveis:");
-        System.out.println("Código do notebook: " + this.cod);
-        System.out.println("Nome do notebook: " + this.name + "\n");
+    public void printInitQty() {
+        System.out.println("\nA classe notebook foi inicializada " + initQty + " vez(es)\n");
     }
 }

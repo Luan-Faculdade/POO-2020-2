@@ -2,6 +2,6 @@
 
 public interface IRegistered {
 
-    void printClassData();
+    void printInitQty();
 
 }
