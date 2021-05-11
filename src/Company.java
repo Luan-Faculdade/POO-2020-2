@@ -1,23 +1,29 @@
 //Nome: Luan Emanuel da Silva - RA: 2143860
 
-import java.util.List;
-
 public class Company {
 
     private String name;
     private int cod;
-    private final CustomerManager customerManager = new CustomerManager();
-    private final EmployeeManager employeeManager = new EmployeeManager();
+    private Employee employee = new Employee();
+    private Customers customers = new Customers();
 
     public Company() {
     }
 
-    public CustomerManager getCustomerManager() {
-        return customerManager;
+    public Employee getEmployee() {
+        return employee;
     }
 
-    public EmployeeManager getEmployeeManager() {
-        return employeeManager;
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
+    }
+
+    public Customers getCustomers() {
+        return customers;
+    }
+
+    public void setCustomers(Customers customers) {
+        this.customers = customers;
     }
 
     public String getName() {
@@ -32,11 +38,7 @@ public class Company {
         return cod;
     }
 
-    public void setCod(int cod) throws CodNumBelowException {
-        if(cod >=0){
-            this.cod = cod;
-        }else{
-            throw new CodNumBelowException();
-        }
+    public void setCod(int cod) {
+        this.cod = cod;
     }
 }

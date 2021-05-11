@@ -20,13 +20,7 @@ public class Employee extends UserData {
         return wage;
     }
 
-    public void setWage(int wage){
+    public void setWage(int wage) {
         this.wage = wage;
-    }
-
-    @Override
-    public void printClass() {
-        super.printClass();
-        System.out.println("Classe mãe: UserData");
     }
 }

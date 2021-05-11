@@ -1,11 +1,11 @@
 //Nome: Luan Emanuel da Silva - RA: 2143860
 
-public class Notebook implements IRegistered{
+public class Notebook {
 
     private int cod;
     private String name;
-    private final Specs specs = new Specs();
-    private final NoteInfo info = new NoteInfo();
+    private Specs specs = new Specs();
+    private NoteInfo info = new NoteInfo();
 
     public Notebook() {
     }
@@ -14,20 +14,24 @@ public class Notebook implements IRegistered{
         return specs;
     }
 
+    public void setSpecs(Specs specs) {
+        this.specs = specs;
+    }
+
     public NoteInfo getInfo() {
         return info;
+    }
+
+    public void setInfo(NoteInfo info) {
+        this.info = info;
     }
 
     public int getCod() {
         return cod;
     }
 
-    public void setCod(int cod) throws CodNumBelowException {
-        if(cod >=0){
-            this.cod = cod;
-        }else{
-            throw new CodNumBelowException();
-        }
+    public void setCod(int cod) {
+        this.cod = cod;
     }
 
     public String getName() {
@@ -36,12 +40,5 @@ public class Notebook implements IRegistered{
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    @Override
-    public void printClassData() {
-        System.out.println("\nA classe " + this + " possui os seguintes dados em suas variaveis:");
-        System.out.println("Código do notebook: " + this.cod);
-        System.out.println("Nome do notebook: " + this.name + "\n");
     }
 }

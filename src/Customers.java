@@ -14,10 +14,4 @@ public class Customers extends UserData {
     public void setRG(long RG) {
         this.RG = RG;
     }
-
-    @Override
-    public void printClass() {
-        super.printClass();
-        System.out.println("Classe mãe: UserData");
-    }
 }
