@@ -12,8 +12,7 @@ public class CompanyManager {
     private final Read read = new Read();
     private final List<Company> companyList = new ArrayList<>();
 
-    public void addCompany(){
-        Company company = setCompanyCod();
+    public void addCompany(Company company){
 
         if(getCompany(company.getCod()) == null){
             companyList.add(company);

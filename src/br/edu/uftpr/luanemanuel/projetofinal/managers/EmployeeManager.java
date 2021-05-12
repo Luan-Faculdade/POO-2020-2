@@ -12,8 +12,7 @@ public class EmployeeManager {
     private final Read read = new Read();
     private final List<Employee> employeeList = new ArrayList<>();
 
-    public void addEmployee(){
-        Employee employee = setEmployee();
+    public void addEmployee(Employee employee){
 
         if(getEmployee(employee.getCod()) == null){
             employeeList.add(employee);
