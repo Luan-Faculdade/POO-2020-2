@@ -1,5 +1,9 @@
 //Nome: Luan Emanuel da Silva - RA: 2143860
+package br.edu.uftpr.luanemanuel.projetofinal.managers;
 
+import br.edu.uftpr.luanemanuel.projetofinal.data.Notebook;
+import br.edu.uftpr.luanemanuel.projetofinal.util.CodNumBelowException;
+import br.edu.uftpr.luanemanuel.projetofinal.util.Read;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +19,7 @@ public class NotebookManager {
             notebookList.add(notebook);
             System.out.println("\nCadastro do notebook de COD " + notebook.getCod() + " efetuado com sucesso!");
         }else{
-            System.out.println("\nNotebook já cadastrado!");
+            System.out.println("\nbr.uftpr.luanemanuel.projetofinal.Notebook já cadastrado!");
         }
     }
 
@@ -35,26 +39,26 @@ public class NotebookManager {
 
         if(getNotebook(cod) != null){
             notebookList.remove(getNotebook(cod));
-            System.out.println("\nNotebook de COD " + cod + " deletado com sucesso!");
+            System.out.println("\nbr.uftpr.luanemanuel.projetofinal.Notebook de COD " + cod + " deletado com sucesso!");
         }else{
-            System.out.println("\nNotebook de código " + cod + " não encontrado!");
+            System.out.println("\nbr.uftpr.luanemanuel.projetofinal.Notebook de código " + cod + " não encontrado!");
         }
     }
 
     public void printAllNotebooks(){
         System.out.println("\n--- Exibindo todas os notebooks cadastrados ---");
         for(Notebook value : notebookList){
-            //Notebook
+            //br.uftpr.luanemanuel.projetofinal.Notebook
             System.out.println("\nCódigo do notebook: " + value.getCod());
             System.out.println("Nome do notebook: " + value.getName());
 
-            //Specs
+            //br.uftpr.luanemanuel.projetofinal.Specs
             System.out.println("Quantidade de Ram:" + value.getSpecs().getRamAmt());
             System.out.println("Tamanho da tela: " + value.getSpecs().getScreenSize());
             System.out.println("Marca do processador: " + value.getSpecs().getProcessorBrand());
             System.out.println("Modelo do processador: " + value.getSpecs().getProcessorModel());
 
-            //NoteInfo
+            //br.uftpr.luanemanuel.projetofinal.NoteInfo
             System.out.println("Marca do notebook: " + value.getInfo().getBrand());
             System.out.println("Modelo do notebook: " + value.getInfo().getModel());
         }
@@ -66,22 +70,22 @@ public class NotebookManager {
 
         if(getNotebook(cod) != null){
             Notebook notebook = getNotebook(cod);
-            //Notebook
+            //br.uftpr.luanemanuel.projetofinal.Notebook
             System.out.println("\nCódigo do notebook: " + notebook.getCod());
             System.out.println("Nome do notebook: " + notebook.getName());
 
-            //Specs
+            //br.uftpr.luanemanuel.projetofinal.Specs
             System.out.println("Quantidade de Ram:" + notebook.getSpecs().getRamAmt());
             System.out.println("Tamanho da tela: " + notebook.getSpecs().getScreenSize());
             System.out.println("Marca do processador: " + notebook.getSpecs().getProcessorBrand());
             System.out.println("Modelo do processador: " + notebook.getSpecs().getProcessorModel());
 
-            //NoteInfo
+            //br.uftpr.luanemanuel.projetofinal.NoteInfo
             System.out.println("Marca do notebook: " + notebook.getInfo().getBrand());
             System.out.println("Modelo do notebook: " + notebook.getInfo().getModel());
             notebook.printClassData();
         }else{
-            System.out.println("Notebook de código " + cod + " não encontrado!");
+            System.out.println("br.uftpr.luanemanuel.projetofinal.Notebook de código " + cod + " não encontrado!");
         }
     }
 
@@ -95,7 +99,7 @@ public class NotebookManager {
                     Notebook notebook = createNewUpdatedNotebook(notebookList.get(i));
                     notebookList.set(i, notebook);
                     find = true;
-                    System.out.println("\nNotebook de COD " + cod + " atualizado com sucesso!");
+                    System.out.println("\nbr.uftpr.luanemanuel.projetofinal.Notebook de COD " + cod + " atualizado com sucesso!");
                 }
             }
         }else{
@@ -103,7 +107,7 @@ public class NotebookManager {
         }
 
         if(!find){
-            System.out.println("\nNotebook de código " + cod + " não encontrado!");
+            System.out.println("\nbr.uftpr.luanemanuel.projetofinal.Notebook de código " + cod + " não encontrado!");
         }
     }
 
@@ -113,17 +117,17 @@ public class NotebookManager {
 
         while(!executed){
             try{
-                //Notebook
+                //br.uftpr.luanemanuel.projetofinal.Notebook
                 notebook.setCod(Integer.parseInt(read.ReadData("Insira o código do notebook: ")));
                 notebook.setName(read.ReadData("Insira o nome do notebook: "));
 
-                //Specs
+                //br.uftpr.luanemanuel.projetofinal.Specs
                 notebook.getSpecs().setProcessorBrand(read.ReadData("Insira a marca do processador: "));
                 notebook.getSpecs().setProcessorModel(read.ReadData("Insira o modelo do processador: "));
                 notebook.getSpecs().setRamAmt(Integer.parseInt(read.ReadData("Insira a quantidade de ram em MB: ")));
                 notebook.getSpecs().setScreenSize(Integer.parseInt(read.ReadData("Insira as polegadas da tela: ")));
 
-                //NoteInfo
+                //br.uftpr.luanemanuel.projetofinal.NoteInfo
                 notebook.getInfo().setBrand(read.ReadData("Insira o marca do notebook: "));
                 notebook.getInfo().setModel(read.ReadData("Insira o modelo do notebook: "));
                 executed = true;
@@ -143,16 +147,16 @@ public class NotebookManager {
 
         while(!executed){
             try{
-                //Notebook
+                //br.uftpr.luanemanuel.projetofinal.Notebook
                 notebook.setName(read.ReadData("\nInsira o nome do notebook: "));
 
-                //Specs
+                //br.uftpr.luanemanuel.projetofinal.Specs
                 notebook.getSpecs().setProcessorBrand(read.ReadData("Insira a marca do processador: "));
                 notebook.getSpecs().setProcessorModel(read.ReadData("Insira o modelo do processador: "));
                 notebook.getSpecs().setRamAmt(Integer.parseInt(read.ReadData("Insira a quantidade de ram em MB: ")));
                 notebook.getSpecs().setScreenSize(Integer.parseInt(read.ReadData("Insira as polegadas da tela: ")));
 
-                //NoteInfo
+                //br.uftpr.luanemanuel.projetofinal.NoteInfo
                 notebook.getInfo().setBrand(read.ReadData("Insira o marca do notebook: "));
                 notebook.getInfo().setModel(read.ReadData("Insira o modelo do notebook: "));
                 executed = true;
