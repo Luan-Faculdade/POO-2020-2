@@ -1,5 +1,4 @@
 //Nome: Luan Emanuel da Silva - RA: 2143860
-package br.edu.uftpr.luanemanuel.projetofinal.util;
 
 import java.util.Scanner;
 

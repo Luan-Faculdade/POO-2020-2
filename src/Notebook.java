@@ -1,10 +1,6 @@
 //Nome: Luan Emanuel da Silva - RA: 2143860
-package br.edu.uftpr.luanemanuel.projetofinal.data;
 
-import br.edu.uftpr.luanemanuel.projetofinal.util.CodNumBelowException;
-import br.edu.uftpr.luanemanuel.projetofinal.util.IRegistered;
-
-public class Notebook implements IRegistered {
+public class Notebook implements IRegistered{
 
     private int cod;
     private String name;

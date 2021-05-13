@@ -1,9 +1,5 @@
 //Nome: Luan Emanuel da Silva - RA: 2143860
-package br.edu.uftpr.luanemanuel.projetofinal.managers;
 
-import br.edu.uftpr.luanemanuel.projetofinal.data.Company;
-import br.edu.uftpr.luanemanuel.projetofinal.util.CodNumBelowException;
-import br.edu.uftpr.luanemanuel.projetofinal.util.Read;
 import java.util.ArrayList;
 import java.util.List;
 
