@@ -1,4 +1,8 @@
 //Nome: Luan Emanuel da Silva - RA: 2143860
+package br.edu.uftpr.luanemanuel.projetofinal.util;
+
+import br.edu.uftpr.luanemanuel.projetofinal.data.Address;
+import br.edu.uftpr.luanemanuel.projetofinal.managers.NotebookManager;
 
 public abstract class UserData {
 

@@ -1,5 +1,9 @@
 //Nome: Luan Emanuel da Silva - RA: 2143860
+package br.edu.uftpr.luanemanuel.projetofinal.managers;
 
+import br.edu.uftpr.luanemanuel.projetofinal.data.Employee;
+import br.edu.uftpr.luanemanuel.projetofinal.util.CodNumBelowException;
+import br.edu.uftpr.luanemanuel.projetofinal.util.Read;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,8 +12,7 @@ public class EmployeeManager {
     private final Read read = new Read();
     private final List<Employee> employeeList = new ArrayList<>();
 
-    public void addEmployee(){
-        Employee employee = setEmployee();
+    public void addEmployee(Employee employee){
 
         if(getEmployee(employee.getCod()) == null){
             employeeList.add(employee);

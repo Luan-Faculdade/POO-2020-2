@@ -1,5 +1,9 @@
 //Nome: Luan Emanuel da Silva - RA: 2143860
+package br.edu.uftpr.luanemanuel.projetofinal.managers;
 
+import br.edu.uftpr.luanemanuel.projetofinal.data.Company;
+import br.edu.uftpr.luanemanuel.projetofinal.util.CodNumBelowException;
+import br.edu.uftpr.luanemanuel.projetofinal.util.Read;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,8 +12,7 @@ public class CompanyManager {
     private final Read read = new Read();
     private final List<Company> companyList = new ArrayList<>();
 
-    public void addCompany(){
-        Company company = setCompanyCod();
+    public void addCompany(Company company){
 
         if(getCompany(company.getCod()) == null){
             companyList.add(company);
