@@ -12,7 +12,8 @@ public class CustomerManager {
     private final Read read = new Read();
     private final List<Customers> customerList = new ArrayList<>();
 
-    public void addCustomer(Customers customers){
+    public void addCustomer(){
+        Customers customers = setCustomer();
 
         if(getCustomers(customers.getCod()) == null){
             customerList.add(customers);

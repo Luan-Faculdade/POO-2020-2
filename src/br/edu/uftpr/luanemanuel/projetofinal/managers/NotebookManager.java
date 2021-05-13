@@ -12,7 +12,8 @@ public class NotebookManager {
     private final Read read = new Read();
     private final List<Notebook> notebookList = new ArrayList<>();
 
-    public void addNotebook(Notebook notebook){
+    public void addNotebook(){
+        Notebook notebook = setNotebook();
 
         if(getNotebook(notebook.getCod()) == null){
             notebookList.add(notebook);
