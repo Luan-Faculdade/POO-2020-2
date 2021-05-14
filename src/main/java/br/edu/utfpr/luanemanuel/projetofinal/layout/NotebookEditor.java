@@ -346,7 +346,7 @@ public class NotebookEditor extends javax.swing.JFrame {
                             updateButton.setText("Editar");
                             this.setTitle("Sistema de Cadastro - Consultando um Notebook"); 
                             isEditing = true;
-                            setCompanyNameLabel();
+                            setNotebookNameLabel();
                         }else{
                            JOptionPane.showMessageDialog(null, "O notebook não foi encontrada na lista!"); 
                         }

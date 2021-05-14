@@ -341,7 +341,7 @@ public class CustomerEditor extends javax.swing.JFrame {
                         updateButton.setText("Editar");
                         this.setTitle("Sistema de Cadastro - Consultando um Cliente"); 
                         isEditing = true;
-                        setCompanyNameLabel();
+                        setCustomerNameLabel();
                     }else{
                        JOptionPane.showMessageDialog(null, "O cliente não foi encontrada na lista!"); 
                     }

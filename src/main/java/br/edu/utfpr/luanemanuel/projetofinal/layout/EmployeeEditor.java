@@ -354,7 +354,7 @@ public class EmployeeEditor extends javax.swing.JFrame {
                         updateButton.setText("Editar");
                         this.setTitle("Sistema de Cadastro - Consultando um Funcionário"); 
                         isEditing = true;
-                        setCompanyNameLabel();
+                        setEmployeeNameLabel();
                     }else{
                        JOptionPane.showMessageDialog(null, "O funcionário não foi encontrada na lista!"); 
                     }
