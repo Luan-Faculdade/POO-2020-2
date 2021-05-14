@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="functionLabel" pref="380" max="32767" attributes="0"/>
+                  <Component id="titleLabel" alignment="0" pref="380" max="32767" attributes="0"/>
+                  <Component id="streetLabel" alignment="0" pref="380" max="32767" attributes="0"/>
+                  <Component id="dadosLabel" alignment="0" pref="380" max="32767" attributes="0"/>
+                  <Component id="functionFormTextField" pref="380" max="32767" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="codLabel" max="32767" attributes="0"/>
+                              <Component id="codFormTextField" pref="181" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="nameFormTextField" pref="181" max="32767" attributes="0"/>
+                              <Component id="nameLabel" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="cpfFormTextField" pref="181" max="32767" attributes="0"/>
+                              <Component id="cpfLabel" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="wageLabel" max="32767" attributes="0"/>
+                              <Component id="wageFormTextField" pref="181" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Component id="streetFormTextField" alignment="0" pref="380" max="32767" attributes="0"/>
+                  <Component id="dadosLabel1" alignment="0" pref="380" max="32767" attributes="0"/>
+                  <Component id="companyCodLabel" alignment="0" max="32767" attributes="0"/>
+                  <Component id="employeeLabel" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="returnButton" max="32767" attributes="0"/>
+                          <Component id="numFormTextField" alignment="0" pref="100" max="32767" attributes="0"/>
+                          <Component id="numLabel" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="cityLabel" max="32767" attributes="0"/>
+                                  <Component id="cityFormTextField" alignment="1" pref="181" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="ufFormTextField" max="32767" attributes="0"/>
+                                  <Component id="ufLabel" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="updateButton" min="-2" pref="173" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="deleteButton" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace pref="67" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+              <Component id="titleLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="companyCodLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="employeeLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="dadosLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="codLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="nameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="codFormTextField" min="-2" max="-2" attributes="0"/>
+                  <Component id="nameFormTextField" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="cpfLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="wageLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="cpfFormTextField" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="wageFormTextField" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="functionLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="functionFormTextField" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="dadosLabel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="streetLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="streetFormTextField" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="numLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="ufLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cityLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="numFormTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cityFormTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="ufFormTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="updateButton" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
+                  <Component id="returnButton" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                  <Component id="deleteButton" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JButton" name="returnButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Voltar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="returnButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="updateButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Editar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="updateButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="titleLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="20" style="1"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Consulta de Funcionario"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="codFormTextField">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="0"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="codFormTextFieldActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="nameFormTextField">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="0"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="codLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="0"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="C&#xf3;digo"/>
+        <Property name="horizontalTextPosition" type="int" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="nameLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="0"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Nome"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="companyCodLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="1"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Empresa: "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="cpfFormTextField">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="0"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cpfFormTextFieldActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="wageFormTextField">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="0"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cpfLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="0"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="CPF"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="wageLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="0"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Sal&#xe1;rio"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="dadosLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="1"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Dados"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="dadosLabel1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="1"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Endere&#xe7;o"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="streetLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="0"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Rua"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="streetFormTextField">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="0"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="numLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="0"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="N&#xfa;mero"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="ufLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="0"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="UF"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="numFormTextField">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="0"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numFormTextFieldActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="cityFormTextField">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="0"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="ufFormTextField">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="0"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ufFormTextFieldActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cityLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="0"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Cidade"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="functionFormTextField">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="0"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="functionLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="0"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Fun&#xe7;&#xe3;o"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="employeeLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="1"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Funcion&#xe1;rio: "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="deleteButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Deletar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteButtonActionPerformed"/>
+      </Events>
+    </Component>
+  </SubComponents>
+</Form>
