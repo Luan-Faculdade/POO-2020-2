@@ -317,41 +317,48 @@ public class NotebookEditor extends javax.swing.JFrame {
                 int option = JOptionPane.showConfirmDialog(null, "Deseja realmente atualizar? Está ação não pode ser desfeita!", "Confirmar atualização", JOptionPane.YES_NO_OPTION);
 
                 if(option == JOptionPane.YES_OPTION){
-                    try{
-                        int index = getNotebookIndex();
-                        if(index != -1){
-                            notebook.setName(nameTextField.getText());
-                            notebook.getSpecs().setProcessorBrand(pBrandTextField.getText());
-                            notebook.getSpecs().setProcessorModel(pModelTextField.getText());
-                            notebook.getSpecs().setRamAmt(Integer.parseInt(ramTextField.getText()));
-                            notebook.getSpecs().setScreenSize(Integer.parseInt(screenTextField.getText()));
-                            notebook.getInfo().setBrand(nBrandTextField.getText());
-                            notebook.getInfo().setModel(nModelTextField.getText());
-                            
-                            if(isCustomer){
-                                NoteMain.companyManager.getCompany(companyCod).getCustomerManager().getCustomers(customerCod).getNotebookManager().getNotebookList().set(index, notebook);
-                            }else{
-                                NoteMain.companyManager.getCompany(companyCod).getEmployeeManager().getEmployee(employeeCod).getNotebookManager().getNotebookList().set(index, notebook);
+                    if(!codTextField.getText().isEmpty() && !nameTextField.getText().isEmpty()
+                            && !pBrandTextField.getText().isEmpty() && !pModelTextField.getText().isEmpty()
+                            && !ramTextField.getText().isEmpty() && !screenTextField.getText().isEmpty()
+                            && !nBrandTextField.getText().isEmpty() && !nModelTextField.getText().isEmpty()) {
+                        try {
+                            int index = getNotebookIndex();
+                            if (index != -1) {
+                                notebook.setName(nameTextField.getText());
+                                notebook.getSpecs().setProcessorBrand(pBrandTextField.getText());
+                                notebook.getSpecs().setProcessorModel(pModelTextField.getText());
+                                notebook.getSpecs().setRamAmt(Integer.parseInt(ramTextField.getText()));
+                                notebook.getSpecs().setScreenSize(Integer.parseInt(screenTextField.getText()));
+                                notebook.getInfo().setBrand(nBrandTextField.getText());
+                                notebook.getInfo().setModel(nModelTextField.getText());
+
+                                if (isCustomer) {
+                                    NoteMain.companyManager.getCompany(companyCod).getCustomerManager().getCustomers(customerCod).getNotebookManager().getNotebookList().set(index, notebook);
+                                } else {
+                                    NoteMain.companyManager.getCompany(companyCod).getEmployeeManager().getEmployee(employeeCod).getNotebookManager().getNotebookList().set(index, notebook);
+                                }
+
+                                JOptionPane.showMessageDialog(null, "Notebook atualizado com sucesso!");
+                                setDataToUpdate();
+                                nameTextField.setEditable(false);
+                                pBrandTextField.setEditable(false);
+                                pModelTextField.setEditable(false);
+                                ramTextField.setEditable(false);
+                                screenTextField.setEditable(false);
+                                nModelTextField.setEditable(false);
+                                nBrandTextField.setEditable(false);
+                                updateButton.setText("Editar");
+                                this.setTitle("Sistema de Cadastro - Consultando um Notebook");
+                                isEditing = true;
+                                setNotebookNameLabel();
+                            } else {
+                                JOptionPane.showMessageDialog(null, "O notebook não foi encontrada na lista!");
                             }
-                            
-                            JOptionPane.showMessageDialog(null, "Notebook atualizado com sucesso!"); 
-                            setDataToUpdate();
-                            nameTextField.setEditable(false);
-                            pBrandTextField.setEditable(false);
-                            pModelTextField.setEditable(false);
-                            ramTextField.setEditable(false);
-                            screenTextField.setEditable(false);
-                            nModelTextField.setEditable(false);
-                            nBrandTextField.setEditable(false);
-                            updateButton.setText("Editar");
-                            this.setTitle("Sistema de Cadastro - Consultando um Notebook"); 
-                            isEditing = true;
-                            setNotebookNameLabel();
-                        }else{
-                           JOptionPane.showMessageDialog(null, "O notebook não foi encontrada na lista!"); 
+                        } catch (NumberFormatException numberFormatException) {
+                            JOptionPane.showMessageDialog(null, "Caractere invalido, por favor revise os campos!");
                         }
-                    }catch(NumberFormatException numberFormatException){
-                        JOptionPane.showMessageDialog(null, "Caractere invalido, por favor revise os campos!");
+                    }else{
+                        JOptionPane.showMessageDialog(null, "Parece que está faltando algum dado! Por favor, revise os campos.");
                     }
                 }
             }

@@ -329,37 +329,45 @@ public class EmployeeEditor extends javax.swing.JFrame {
             int option = JOptionPane.showConfirmDialog(null, "Deseja realmente atualizar? Está ação não pode ser desfeita!", "Confirmar atualização", JOptionPane.YES_NO_OPTION);
 
             if(option == JOptionPane.YES_OPTION){
-                try{
-                    int index = getEmployeeIndex();
-                    if(index != -1){
-                        employee.setName(nameFormTextField.getText());
-                        employee.setCpf(Integer.parseInt(cpfFormTextField.getText()));
-                        employee.setWage(Integer.parseInt(wageFormTextField.getText()));
-                        employee.setFunction(functionFormTextField.getText());
-                        employee.getAddress().setCity(cityFormTextField.getText());
-                        employee.getAddress().setNum(Integer.parseInt(numFormTextField.getText()));
-                        employee.getAddress().setStreet(streetFormTextField.getText());
-                        employee.getAddress().setUf(ufFormTextField.getText());
-                        NoteMain.companyManager.getCompany(companyCod).getEmployeeManager().getEmployeeList().set(index, employee);
-                        JOptionPane.showMessageDialog(null, "Funcionário atualizado com sucesso!"); 
-                        setDataToUpdate();
-                        nameFormTextField.setEditable(false);
-                        cpfFormTextField.setEditable(false);
-                        wageFormTextField.setEditable(false);
-                        functionFormTextField.setEditable(false);
-                        cityFormTextField.setEditable(false);
-                        numFormTextField.setEditable(false);
-                        streetFormTextField.setEditable(false);
-                        ufFormTextField.setEditable(false);
-                        updateButton.setText("Editar");
-                        this.setTitle("Sistema de Cadastro - Consultando um Funcionário"); 
-                        isEditing = true;
-                        setEmployeeNameLabel();
-                    }else{
-                       JOptionPane.showMessageDialog(null, "O funcionário não foi encontrada na lista!"); 
+                if(!nameFormTextField.getText().isEmpty() && !codFormTextField.getText().isEmpty()
+                        && !cpfFormTextField.getText().isEmpty() && !wageFormTextField.getText().isEmpty()
+                        && !streetFormTextField.getText().isEmpty() && !numFormTextField.getText().isEmpty()
+                        && !cityFormTextField.getText().isEmpty() && !ufFormTextField.getText().isEmpty()
+                        && !functionFormTextField.getText().isEmpty()) {
+                    try {
+                        int index = getEmployeeIndex();
+                        if (index != -1) {
+                            employee.setName(nameFormTextField.getText());
+                            employee.setCpf(Integer.parseInt(cpfFormTextField.getText()));
+                            employee.setWage(Integer.parseInt(wageFormTextField.getText()));
+                            employee.setFunction(functionFormTextField.getText());
+                            employee.getAddress().setCity(cityFormTextField.getText());
+                            employee.getAddress().setNum(Integer.parseInt(numFormTextField.getText()));
+                            employee.getAddress().setStreet(streetFormTextField.getText());
+                            employee.getAddress().setUf(ufFormTextField.getText());
+                            NoteMain.companyManager.getCompany(companyCod).getEmployeeManager().getEmployeeList().set(index, employee);
+                            JOptionPane.showMessageDialog(null, "Funcionário atualizado com sucesso!");
+                            setDataToUpdate();
+                            nameFormTextField.setEditable(false);
+                            cpfFormTextField.setEditable(false);
+                            wageFormTextField.setEditable(false);
+                            functionFormTextField.setEditable(false);
+                            cityFormTextField.setEditable(false);
+                            numFormTextField.setEditable(false);
+                            streetFormTextField.setEditable(false);
+                            ufFormTextField.setEditable(false);
+                            updateButton.setText("Editar");
+                            this.setTitle("Sistema de Cadastro - Consultando um Funcionário");
+                            isEditing = true;
+                            setEmployeeNameLabel();
+                        } else {
+                            JOptionPane.showMessageDialog(null, "O funcionário não foi encontrada na lista!");
+                        }
+                    } catch (NumberFormatException numberFormatException) {
+                        JOptionPane.showMessageDialog(null, "Caractere invalido, por favor revise os campos!");
                     }
-                }catch(NumberFormatException numberFormatException){
-                    JOptionPane.showMessageDialog(null, "Caractere invalido, por favor revise os campos!");
+                }else{
+                    JOptionPane.showMessageDialog(null, "Parece que está faltando algum dado! Por favor, revise os campos.");
                 }
             }
         }

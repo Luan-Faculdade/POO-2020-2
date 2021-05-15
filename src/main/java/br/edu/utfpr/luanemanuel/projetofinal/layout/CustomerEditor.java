@@ -318,35 +318,42 @@ public class CustomerEditor extends javax.swing.JFrame {
             int option = JOptionPane.showConfirmDialog(null, "Deseja realmente atualizar? Está ação não pode ser desfeita!", "Confirmar atualização", JOptionPane.YES_NO_OPTION);
 
             if(option == JOptionPane.YES_OPTION){
-                try{
-                    int index = getCustomerIndex();
-                    if(index != -1){
-                        customer.setName(nameFormTextField.getText());
-                        customer.setCpf(Integer.parseInt(cpfFormTextField.getText()));
-                        customer.setRG(Integer.parseInt(rgFormTextField.getText()));
-                        customer.getAddress().setCity(cityFormTextField.getText());
-                        customer.getAddress().setNum(Integer.parseInt(numFormTextField.getText()));
-                        customer.getAddress().setStreet(streetFormTextField.getText());
-                        customer.getAddress().setUf(ufFormTextField.getText());
-                        NoteMain.companyManager.getCompany(companyCod).getCustomerManager().getCustomerList().set(index, customer);
-                        JOptionPane.showMessageDialog(null, "Cliente atualizado com sucesso!"); 
-                        setDataToUpdate();
-                        nameFormTextField.setEditable(false);
-                        cpfFormTextField.setEditable(false);
-                        rgFormTextField.setEditable(false);
-                        cityFormTextField.setEditable(false);
-                        numFormTextField.setEditable(false);
-                        streetFormTextField.setEditable(false);
-                        ufFormTextField.setEditable(false);
-                        updateButton.setText("Editar");
-                        this.setTitle("Sistema de Cadastro - Consultando um Cliente"); 
-                        isEditing = true;
-                        setCustomerNameLabel();
-                    }else{
-                       JOptionPane.showMessageDialog(null, "O cliente não foi encontrada na lista!"); 
+                if(!nameFormTextField.getText().isEmpty() && !codFormTextField.getText().isEmpty()
+                        && !cpfFormTextField.getText().isEmpty() && !rgFormTextField.getText().isEmpty()
+                        && !streetFormTextField.getText().isEmpty() && !numFormTextField.getText().isEmpty()
+                        && !cityFormTextField.getText().isEmpty() && !ufFormTextField.getText().isEmpty()) {
+                    try {
+                        int index = getCustomerIndex();
+                        if (index != -1) {
+                            customer.setName(nameFormTextField.getText());
+                            customer.setCpf(Integer.parseInt(cpfFormTextField.getText()));
+                            customer.setRG(Integer.parseInt(rgFormTextField.getText()));
+                            customer.getAddress().setCity(cityFormTextField.getText());
+                            customer.getAddress().setNum(Integer.parseInt(numFormTextField.getText()));
+                            customer.getAddress().setStreet(streetFormTextField.getText());
+                            customer.getAddress().setUf(ufFormTextField.getText());
+                            NoteMain.companyManager.getCompany(companyCod).getCustomerManager().getCustomerList().set(index, customer);
+                            JOptionPane.showMessageDialog(null, "Cliente atualizado com sucesso!");
+                            setDataToUpdate();
+                            nameFormTextField.setEditable(false);
+                            cpfFormTextField.setEditable(false);
+                            rgFormTextField.setEditable(false);
+                            cityFormTextField.setEditable(false);
+                            numFormTextField.setEditable(false);
+                            streetFormTextField.setEditable(false);
+                            ufFormTextField.setEditable(false);
+                            updateButton.setText("Editar");
+                            this.setTitle("Sistema de Cadastro - Consultando um Cliente");
+                            isEditing = true;
+                            setCustomerNameLabel();
+                        } else {
+                            JOptionPane.showMessageDialog(null, "O cliente não foi encontrada na lista!");
+                        }
+                    } catch (NumberFormatException numberFormatException) {
+                        JOptionPane.showMessageDialog(null, "Caractere invalido, por favor revise os campos!");
                     }
-                }catch(NumberFormatException numberFormatException){
-                    JOptionPane.showMessageDialog(null, "Caractere invalido, por favor revise os campos!");
+                }else{
+                    JOptionPane.showMessageDialog(null, "Parece que está faltando algum dado! Por favor, revise os campos.");
                 }
             }
         }

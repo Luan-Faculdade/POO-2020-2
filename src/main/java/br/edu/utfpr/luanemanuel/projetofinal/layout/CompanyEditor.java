@@ -165,23 +165,27 @@ public class CompanyEditor extends javax.swing.JFrame {
             int option = JOptionPane.showConfirmDialog(null, "Deseja realmente atualizar? Está ação não pode ser desfeita!", "Confirmar atualização", JOptionPane.YES_NO_OPTION);
 
             if(option == JOptionPane.YES_OPTION){
-                try{
-                    int index = getCompanyIndex();
-                    if(index != -1){
-                        company.setName(nameFormTextField.getText());
-                        NoteMain.companyManager.getCompanyList().set(index, company);
-                        JOptionPane.showMessageDialog(null, "Empresa atualizada com sucesso!"); 
-                        setDataToUpdate();
-                        nameFormTextField.setEditable(false);
-                        updateButton.setText("Editar");
-                        this.setTitle("Sistema de Cadastro - Consultando uma Empresa"); 
-                        isEditing = true;
-                        setCompanyNameLabel();
-                    }else{
-                       JOptionPane.showMessageDialog(null, "A empresa não foi encontrada na lista!"); 
+                if(!nameFormTextField.getText().isEmpty() && !codFormTextField.getText().isEmpty()) {
+                    try {
+                        int index = getCompanyIndex();
+                        if (index != -1) {
+                            company.setName(nameFormTextField.getText());
+                            NoteMain.companyManager.getCompanyList().set(index, company);
+                            JOptionPane.showMessageDialog(null, "Empresa atualizada com sucesso!");
+                            setDataToUpdate();
+                            nameFormTextField.setEditable(false);
+                            updateButton.setText("Editar");
+                            this.setTitle("Sistema de Cadastro - Consultando uma Empresa");
+                            isEditing = true;
+                            setCompanyNameLabel();
+                        } else {
+                            JOptionPane.showMessageDialog(null, "A empresa não foi encontrada na lista!");
+                        }
+                    } catch (NumberFormatException numberFormatException) {
+                        JOptionPane.showMessageDialog(null, "Caractere invalido, por favor revise os campos!");
                     }
-                }catch(NumberFormatException numberFormatException){
-                    JOptionPane.showMessageDialog(null, "Caractere invalido, por favor revise os campos!");
+                }else{
+                    JOptionPane.showMessageDialog(null, "Parece que está faltando algum dado! Por favor, revise os campos.");
                 }
             }
         }
